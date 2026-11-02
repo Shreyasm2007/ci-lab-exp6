@@ -1,0 +1,22 @@
+name: Basic CI Workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  basic-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display welcome message
+        run: echo "GitHub Actions CI workflow executed"
+
+      - name: Display current date
+        run: date
+
+      - name: Display repository information
+        run: echo "Repository workflow is running successfully"
